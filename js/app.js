@@ -18,6 +18,7 @@ const dialogFunc = function(firstLine, secondLine) {
     secondParagraph.textContent = secondLine;
     dialog.appendChild(secondParagraph);
     document.body.appendChild(dialog);
+    //source code for the function: https://jqueryui.com/dialog/#modal-confirmation
     $(function () {
         $("#dialog-confirm").dialog({
             closeOnEscape: false,
