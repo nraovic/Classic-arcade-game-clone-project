@@ -94,7 +94,7 @@ class Enemy extends GameObject {
             lives.textContent = `Life(s) left: ${livesValue}`;
             //dialog box
             if(livesValue === 0) {
-                dialogFunc('Game over! :(',  'Do you want to play again?');
+                dialogFunc('GAME OVER! :-(',  'Do you want to play again?');
             }
         }
     }
@@ -142,7 +142,7 @@ class Player extends GameObject {
             score.textContent = `Score: ${scoreValue}/60`;
             //dialog box
             if (scoreValue === 60) {
-                dialogFunc("Congratulations! You won!", "Do you want to play again?");
+                dialogFunc("CONGRATULATIONS! YOU WON! :-)", "Do you want to play again?");
             }
         }
     }
