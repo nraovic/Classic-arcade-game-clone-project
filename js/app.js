@@ -8,12 +8,15 @@ function getRandomFromArray(myArray) {
     return myArray[Math.floor(Math.random() * myArray.length)];
 }
 //dialog - pops up when the game is over or won
-const dialogFunc = function(insertText) {
+const dialogFunc = function(firstLine, secondLine) {
     const dialog = document.createElement('div');
     dialog.id = "dialog-confirm";
-    const text = document.createElement('p');
-    text.textContent = insertText;
-    dialog.appendChild(text);
+    const firstParagraph = document.createElement('p');
+    const secondParagraph = document.createElement('p');
+    firstParagraph.textContent = firstLine;
+    dialog.appendChild(firstParagraph);
+    secondParagraph.textContent = secondLine;
+    dialog.appendChild(secondParagraph);
     document.body.appendChild(dialog);
     $(function () {
         $("#dialog-confirm").dialog({
@@ -90,7 +93,7 @@ class Enemy extends GameObject {
             lives.textContent = `Life(s) left: ${livesValue}`;
             //dialog box
             if(livesValue === 0) {
-                dialogFunc('Game over! :( Do you want to play again?');
+                dialogFunc('Game over! :(',  'Do you want to play again?');
             }
         }
     }
@@ -138,7 +141,7 @@ class Player extends GameObject {
             score.textContent = `Score: ${scoreValue}/60`;
             //dialog box
             if (scoreValue === 60) {
-                dialogFunc('Congratulations! You won! Do you want to play again?');
+                dialogFunc("Congratulations! You won!", "Do you want to play again?");
             }
         }
     }
