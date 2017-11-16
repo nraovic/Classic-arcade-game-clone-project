@@ -6,8 +6,8 @@ Students should use this [rubric](https://review.udacity.com/#!/projects/2696458
 For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
 
 ## How to run the game
-1. Open index.html
-2. Choose your character, insert your name and press _Let's start the game button_ (this will redirect you to game.html)
+1. Open _index.html_
+2. Choose your character, insert your name and press _Let's start the game_ button (this will redirect you to _game.html_)
 
 ## How to play the game
 * Use arrow keys to move right, left, up and down
