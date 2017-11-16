@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+}
+#name {
+    clear: both;
+}
+.info {
+    width: 505px;
+    margin-left: auto;
+    margin-right: auto;
+    clear: both;
+}
+.lives {
+    float: left;
+    margin-bottom: 0;
+}
+.score {
+    float: right;
+    margin-bottom: 0;
+}
+.back-btn {
+    float: left;
+}

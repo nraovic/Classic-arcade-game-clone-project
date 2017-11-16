@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    font-family: 'VT323', monospace;
+}
+li {
+    display: inline-block;
+    margin-right: 30px;
+}
+button {
+    background-color: #fff;
+}
+li, .char-button {
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+.checked {
+    box-shadow: 5px 5px 5px #000;
+}
+.character,
+.name,
+.start {
+    padding-top: 40px;
+}
+.start-button {
+    width: 300px;
+    height: 100px;
+    font-size: 1.5em;
+    font-family: 'VT323', monospace;
+    border-radius: 5px;
+}
