@@ -1,0 +1,23 @@
+{
+  "name": "classic-arcade-game-clone",
+  "version": "1.0.0",
+  "description": "frontend-nanodegree-arcade-game\r ===============================",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nraovic/Classic-arcade-game-clone-project.git"
+  },
+  "author": "Nevena Raovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nraovic/Classic-arcade-game-clone-project/issues"
+  },
+  "homepage": "https://github.com/nraovic/Classic-arcade-game-clone-project#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
