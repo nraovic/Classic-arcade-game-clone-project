@@ -93,14 +93,14 @@ var Engine = (function(global) {
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {
             let enemyIndex = allEnemies.indexOf(enemy);
+            //first enemy should not have delay, so the game can start as soon as the page opens
             if (enemyIndex === 0){
                 enemy.update(dt);
-            } else if (enemyIndex <= 5) {
-                setTimeout(function() {enemy.update(dt);}, enemy.delay);
+            //other enemies should have delay, so that they don't appear all at the same time
             } else {
-                enemy.update(dt);
+                setTimeout(function() {enemy.update(dt);}, enemy.delay);
             }
-            //delete the enemy after it's run over the canvas and initiate a nwe one
+            //delete the enemy after it's run over the canvas and initiate a new one
             if (enemy.x >= 600) {
                 allEnemies.splice(enemyIndex, 1, new Enemy());
             }
