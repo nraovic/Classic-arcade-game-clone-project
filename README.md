@@ -13,5 +13,5 @@ For detailed instructions on how to get started, check out this [guide](https://
 * Use arrow keys to move right, left, up and down
 * You have three lives
 * Your goal is to reach the water without colliding with the enemies
-* When you reach the water, you will automatically be set off to the initail position
+* When you reach the water, you will automatically be reset to the initail position
 * In order to **win** you have to collect **60 points**, which equals reaching the water three times
