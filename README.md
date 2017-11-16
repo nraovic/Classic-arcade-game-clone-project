@@ -7,7 +7,7 @@ For detailed instructions on how to get started, check out this [guide](https://
 
 ## How to run the game
 1. Open index.html
-2. Choose your character, insert your name and press _Let's start the game button (this will redirect you to game.html)
+2. Choose your character, insert your name and press _Let's start the game button_ (this will redirect you to game.html)
 
 ## How to play the game
 * Use arrow keys to move right, left, up and down
