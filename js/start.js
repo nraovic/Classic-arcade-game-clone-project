@@ -1,7 +1,7 @@
 /* This file adds functionalities to the index.html page
  * It provides a list of character to choose from, 
  * a form to insert a player's name and 
- * the start button that runs the game and opens game.html
+ * the start button that runs the game by redirecting to game.html
 */
 
 //create a button for each character 
