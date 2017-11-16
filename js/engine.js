@@ -100,17 +100,13 @@ var Engine = (function(global) {
             } else {
                 enemy.update(dt);
             }
+            //delete the enemy after it's run over the canvas and initiate a nwe one
             if (enemy.x >= 600) {
                 allEnemies.splice(enemyIndex, 1, new Enemy());
             }
-            //console.log(enemy.x)
-            //if this.x < end of canvas -- update
-            //else -- delete; crete new enemy
             enemy.collision();
         });
-        player.update();
-        //console.log(player.x, player.y);
-        
+        player.update();    
     }
 
     /* This function initially draws the "game level", it will then call
