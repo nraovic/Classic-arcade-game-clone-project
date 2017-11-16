@@ -586,6 +586,7 @@ button.ui-button::-moz-focus-inner {
 .ui-dialog .ui-dialog-titlebar {
 	padding: .4em 1em;
 	position: relative;
+	display: none; //hide the titlebar
 }
 .ui-dialog .ui-dialog-title {
 	float: left;
@@ -1311,9 +1312,4 @@ a.ui-button:active,
 .ui-widget-shadow {
 	-webkit-box-shadow: 0px 0px 5px #666666;
 	box-shadow: 0px 0px 5px #666666;
-}
-
-/*Hide close button*/
-.ui-dialog-titlebar-close {
-    visibility: hidden;
 }
