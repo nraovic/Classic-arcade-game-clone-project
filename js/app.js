@@ -11,13 +11,14 @@ function getRandomFromArray(myArray) {
 const dialogFunc = function(firstLine, secondLine) {
     const dialog = document.createElement('div');
     dialog.id = "dialog-confirm";
-    const firstParagraph = document.createElement('p');
-    const secondParagraph = document.createElement('p');
-    firstParagraph.textContent = firstLine;
-    dialog.appendChild(firstParagraph);
-    secondParagraph.textContent = secondLine;
-    dialog.appendChild(secondParagraph);
     document.body.appendChild(dialog);
+
+    for (let argument of arguments) {
+        const line = document.createElement('p');
+        line.textContent = argument;
+        dialog.appendChild(line);
+    }
+    
     //source code for the function: https://jqueryui.com/dialog/#modal-confirmation
     $(function () {
         $("#dialog-confirm").dialog({
