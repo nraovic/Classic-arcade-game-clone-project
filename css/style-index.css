@@ -31,3 +31,10 @@ li, .char-button {
     font-family: 'VT323', monospace;
     border-radius: 5px;
 }
+.start-button, .char-button {
+    box-shadow: 2px 2px 2px #555353;
+}
+
+.start-button:focus, .char-button:focus {
+    outline: 0;
+}
