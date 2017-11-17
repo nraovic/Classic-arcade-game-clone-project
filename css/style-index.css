@@ -2,6 +2,14 @@ body {
     text-align: center;
     font-family: 'VT323', monospace;
 }
+h1 {
+    font-size: 2.2em;
+    font-weight: normal;
+}
+h2 {
+    font-size: 1.7em;
+    font-weight: normal;
+}
 li {
     display: inline-block;
     margin-right: 30px;
@@ -32,7 +40,8 @@ li, .char-button {
     border-radius: 5px;
 }
 .start-button, .char-button {
-    box-shadow: 2px 2px 2px #555353;
+    box-shadow: 2px 2px #a19e9e;
+    border: 2px solid #a19e9e;
 }
 
 .start-button:focus, .char-button:focus {
