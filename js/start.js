@@ -5,15 +5,15 @@
 */
 
 //create a button for each character 
-let buttons = ['images/char-boy.png', 'images/char-cat-girl.png', 'images/char-horn-girl.png', 'images/char-pink-girl.png'];
-let displayBtn = () => {
+const buttons = ['images/char-boy.png', 'images/char-cat-girl.png', 'images/char-horn-girl.png', 'images/char-pink-girl.png'];
+const displayBtn = () => {
     buttons.forEach((choice) => {
-        let buttonList = document.createElement("LI");
-        let btn = document.createElement("BUTTON");
-        btn.className += "char-button";
+        let buttonList = document.createElement('LI');
+        let btn = document.createElement('BUTTON');
+        btn.className += 'char-button';
         btn.style.cssText = `background-image: url(${choice});`;
         buttonList.appendChild(btn);
-        document.getElementById("player").appendChild(buttonList);
+        document.getElementById('player').appendChild(buttonList);
     })
 }
 displayBtn();
@@ -23,7 +23,7 @@ displayBtn();
 const ul = document.getElementById('player');
 const charList = ul.childNodes;
 
-ul.addEventListener("click", (e) => {
+ul.addEventListener('click', (e) => {
     const button = e.target;
     if(button.tagName === 'BUTTON') {
         for (let char of charList) {
@@ -64,5 +64,5 @@ button.addEventListener('click', (e) => {
         return;
     } 
     
-    window.open("game.html", "_self");
+    window.open('game.html', '_self');
 })

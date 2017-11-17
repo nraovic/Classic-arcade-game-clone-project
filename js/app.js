@@ -21,18 +21,18 @@ const dialogFunc = function(firstLine, secondLine) {
     
     //source code for the function: https://jqueryui.com/dialog/#modal-confirmation
     $(function () {
-        $("#dialog-confirm").dialog({
+        $('#dialog-confirm').dialog({
             closeOnEscape: false,
             resizable: false,
-            height: "auto",
+            height: 'auto',
             width: 400,
             modal: true,
             buttons: {
-                "Yes": function () {
+                'Yes': function () {
                     window.location.reload(true);
                 },
-                "No, thanks": function () {
-                    window.open("index.html", "_self");
+                'No, thanks': function () {
+                    window.open('index.html', '_self');
                 }
             }
         });
@@ -111,7 +111,7 @@ class Player extends GameObject {
     }
 
     handleInput(key) {
-        //player is allowed to move 5 steps up and 2 steps on the each side from it's initial position (202, 410)
+        //player is allowed to move 5 steps up and 2 steps on the each side from its initial position (202, 410)
         const boundaries = [202 - rowStep*2, 410 - 5*colStep, 202 + 2*rowStep, 410];
         const [leftBoundary, topBoundary, rightBoundary, bottomBoundary] = boundaries;
 
