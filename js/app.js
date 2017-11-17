@@ -37,7 +37,7 @@ const dialogFunc = function(firstLine, secondLine) {
             }
         });
     });
-}
+};
 
 //Set the player's name, score and number of lives to show up on the screen
 //player's name

@@ -14,8 +14,8 @@ const displayBtn = () => {
         btn.style.cssText = `background-image: url(${choice});`;
         buttonList.appendChild(btn);
         document.getElementById('player').appendChild(buttonList);
-    })
-}
+    });
+};
 displayBtn();
 
 
@@ -37,7 +37,7 @@ ul.addEventListener('click', (e) => {
         const buttonClicked = button.style.backgroundImage.match(/"(.*?)"/)[1]; //parse the url to get only the image name 
         sessionStorage.setItem('sprite', buttonClicked);
     }
-})
+});
 
 //store Player's name in session storage
 const form = document.querySelector('.name-form');
@@ -47,7 +47,7 @@ form.addEventListener('change', (e) => {
     const value = input.value;
     sessionStorage.setItem('charName', value);
 
-})
+});
 
 //create Start Game button that runs the game and rediractes to game.html 
 //check if the character and name are inserted before redirecting
@@ -65,4 +65,4 @@ button.addEventListener('click', (e) => {
     } 
     
     window.open('game.html', '_self');
-})
+});
