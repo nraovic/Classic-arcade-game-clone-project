@@ -9,20 +9,24 @@
 </head>
 
 <body>
-    <h1 class="game-title">Classic Archade Game</h1>
-    <article class="character">
-        <h2 class="choose-character">Choose Your Character:</h2>
-        <ul id="player"></ul>
-    </article>
-    <article class = "name">
-        <h2 class="player-name">Enter Your Name:</h2>
-        <form class="name-form">
-            <input type="text" name="name" required minlength="1" maxlength="60" placeholder="Player's Name">
-        </form>
-    </article>
-    <article class = "start">
-        <button class= "start-button" type="submit" value="Submit">Let's Start the Game</button>
-    </article>
+    <header>
+        <h1 class="game-title">Classic Archade Game</h1>
+    </header>
+    <section class="main">
+        <article class="character">
+            <h2 class="choose-character">Choose Your Character:</h2>
+            <ul id="player"></ul>
+        </article>
+        <article class = "name">
+            <h2 class="player-name">Enter Your Name:</h2>
+            <form class="name-form">
+                <input type="text" name="name" required minlength="1" maxlength="60" placeholder="Player's Name">
+            </form>
+        </article>
+        <article class = "start">
+            <button class= "start-button" type="submit" value="Submit">Let's Start the Game</button>
+        </article>
+    </section>
     <script src="dist/start.js"></script>
 </body>
 
