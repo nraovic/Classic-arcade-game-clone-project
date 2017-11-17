@@ -10,12 +10,12 @@
 var buttons = ['images/char-boy.png', 'images/char-cat-girl.png', 'images/char-horn-girl.png', 'images/char-pink-girl.png'];
 var displayBtn = function displayBtn() {
     buttons.forEach(function (choice) {
-        var buttonList = document.createElement("LI");
-        var btn = document.createElement("BUTTON");
-        btn.className += "char-button";
+        var buttonList = document.createElement('LI');
+        var btn = document.createElement('BUTTON');
+        btn.className += 'char-button';
         btn.style.cssText = 'background-image: url(' + choice + ');';
         buttonList.appendChild(btn);
-        document.getElementById("player").appendChild(buttonList);
+        document.getElementById('player').appendChild(buttonList);
     });
 };
 displayBtn();
@@ -24,7 +24,7 @@ displayBtn();
 var ul = document.getElementById('player');
 var charList = ul.childNodes;
 
-ul.addEventListener("click", function (e) {
+ul.addEventListener('click', function (e) {
     var button = e.target;
     if (button.tagName === 'BUTTON') {
         var _iteratorNormalCompletion = true;
@@ -85,5 +85,5 @@ button.addEventListener('click', function (e) {
         return;
     }
 
-    window.open("game.html", "_self");
+    window.open('game.html', '_self');
 });

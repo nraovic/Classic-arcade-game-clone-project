@@ -5,17 +5,17 @@
 */
 
 //create a button for each character 
-let buttons = ['images/char-boy.png', 'images/char-cat-girl.png', 'images/char-horn-girl.png', 'images/char-pink-girl.png'];
-let displayBtn = () => {
+const buttons = ['images/char-boy.png', 'images/char-cat-girl.png', 'images/char-horn-girl.png', 'images/char-pink-girl.png'];
+const displayBtn = () => {
     buttons.forEach((choice) => {
-        let buttonList = document.createElement("LI");
-        let btn = document.createElement("BUTTON");
-        btn.className += "char-button";
+        let buttonList = document.createElement('LI');
+        let btn = document.createElement('BUTTON');
+        btn.className += 'char-button';
         btn.style.cssText = `background-image: url(${choice});`;
         buttonList.appendChild(btn);
-        document.getElementById("player").appendChild(buttonList);
-    })
-}
+        document.getElementById('player').appendChild(buttonList);
+    });
+};
 displayBtn();
 
 
@@ -23,7 +23,7 @@ displayBtn();
 const ul = document.getElementById('player');
 const charList = ul.childNodes;
 
-ul.addEventListener("click", (e) => {
+ul.addEventListener('click', (e) => {
     const button = e.target;
     if(button.tagName === 'BUTTON') {
         for (let char of charList) {
@@ -37,7 +37,7 @@ ul.addEventListener("click", (e) => {
         const buttonClicked = button.style.backgroundImage.match(/"(.*?)"/)[1]; //parse the url to get only the image name 
         sessionStorage.setItem('sprite', buttonClicked);
     }
-})
+});
 
 //store Player's name in session storage
 const form = document.querySelector('.name-form');
@@ -47,7 +47,7 @@ form.addEventListener('change', (e) => {
     const value = input.value;
     sessionStorage.setItem('charName', value);
 
-})
+});
 
 //create Start Game button that runs the game and rediractes to game.html 
 //check if the character and name are inserted before redirecting
@@ -64,5 +64,5 @@ button.addEventListener('click', (e) => {
         return;
     } 
     
-    window.open("game.html", "_self");
-})
+    window.open('game.html', '_self');
+});

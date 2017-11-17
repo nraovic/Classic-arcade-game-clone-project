@@ -53,18 +53,18 @@ var dialogFunc = function dialogFunc(firstLine, secondLine) {
     }
 
     $(function () {
-        $("#dialog-confirm").dialog({
+        $('#dialog-confirm').dialog({
             closeOnEscape: false,
             resizable: false,
-            height: "auto",
+            height: 'auto',
             width: 400,
             modal: true,
             buttons: {
-                "Yes": function Yes() {
+                'Yes': function Yes() {
                     window.location.reload(true);
                 },
-                "No, thanks": function NoThanks() {
-                    window.open("index.html", "_self");
+                'No, thanks': function NoThanks() {
+                    window.open('index.html', '_self');
                 }
             }
         });
@@ -184,7 +184,7 @@ var Player = function (_GameObject2) {
     _createClass(Player, [{
         key: 'handleInput',
         value: function handleInput(key) {
-            //player is allowed to move 5 steps up and 2 steps on the each side from it's initial position (202, 410)
+            //player is allowed to move 5 steps up and 2 steps on the each side from its initial position (202, 410)
             var boundaries = [202 - rowStep * 2, 410 - 5 * colStep, 202 + 2 * rowStep, 410];
             var leftBoundary = boundaries[0],
                 topBoundary = boundaries[1],
