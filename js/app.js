@@ -64,7 +64,7 @@ class GameObject {
 //helper functions
 //random speed in pixel/sec
 function getRandomSpeed() {
-    return Math.floor(Math.random() * (500 - 200)) + 200;
+    return Math.random() * (500 - 200) + 200;
 }
 
 function getYCoordinate() {
