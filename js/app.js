@@ -1,11 +1,12 @@
 //helper functions
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
+function getRandomSpeed() {
+    const minSpeed = Math.ceil(200);
+    const maxSpeed = Math.floor(500);
+    return Math.floor(Math.random() * (maxSpeed - minSpeed)) + minSpeed;
 }
-function getRandomFromArray(myArray) {
-    return myArray[Math.floor(Math.random() * myArray.length)];
+function getYCoordinate() {
+    const yCoordinates = [60, 143, 223];
+    return yCoordinates[Math.floor(Math.random() * yCoordinates.length)];
 }
 //dialog - pops up when the game is over or won
 const dialogFunc = function(firstLine, secondLine) {
@@ -71,10 +72,10 @@ class GameObject {
 }
 
 class Enemy extends GameObject {
-    constructor(sprite = 'images/enemy-bug.png', x = -200, y = getRandomFromArray([60, 143, 223]), height = 67, width = 80, speedX = getRandomInt(200, 500), delay = getRandomInt(0, 3000)) {
+    constructor(sprite = 'images/enemy-bug.png', x = -200, y = getYCoordinate(), height = 67, width = 80, speedX = getRandomSpeed()) {
         super(sprite, x, y, height, width);
         this.speedX = speedX;
-        this.delay = delay;
+        //this.delay = delay;
     } 
     // Multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
@@ -155,10 +156,9 @@ const enemy1 = new Enemy();
 const enemy2 = new Enemy();
 const enemy3 = new Enemy();
 const enemy4 = new Enemy();
-const enemy5 = new Enemy();
 
 
-let allEnemies = [enemy1, enemy2, enemy3, enemy4, enemy5];
+let allEnemies = [enemy1, enemy2, enemy3, enemy4];
 // Place the player object in a variable called player
 let player = new Player();
 
