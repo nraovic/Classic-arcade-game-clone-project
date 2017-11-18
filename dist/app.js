@@ -105,7 +105,7 @@ var GameObject = function () {
 
 
 function getRandomSpeed() {
-    return Math.floor(Math.random() * (500 - 200)) + 200;
+    return Math.random() * (500 - 200) + 200;
 }
 
 function getYCoordinate() {
@@ -122,13 +122,13 @@ var Enemy = function (_GameObject) {
         var y = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : getYCoordinate();
         var height = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 67;
         var width = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 80;
-        var speedX = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : getRandomSpeed();
+        var speed = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : getRandomSpeed();
 
         _classCallCheck(this, Enemy);
 
         var _this = _possibleConstructorReturn(this, (Enemy.__proto__ || Object.getPrototypeOf(Enemy)).call(this, sprite, x, y, height, width));
 
-        _this.speedX = speedX;
+        _this.speed = speed;
         return _this;
     }
     // Multiply any movement by the dt parameter
@@ -139,7 +139,7 @@ var Enemy = function (_GameObject) {
     _createClass(Enemy, [{
         key: 'update',
         value: function update(dt) {
-            this.x += this.speedX * dt;
+            this.x += this.speed * dt;
         }
     }, {
         key: 'collision',
