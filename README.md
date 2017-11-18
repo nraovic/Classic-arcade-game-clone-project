@@ -3,7 +3,7 @@ Frontend Nanodegree Classic Arcade Game Clone project
 
 The goal of this project is to build **object-oriented** Frogger game including the player characters and enemies. The visual assets and a game loop engine are provided. 
 
-##ES6
+## ES6
 The game is build using ES6 features, and Babel is used to transpile the ES6 code to ES5. 
 
 However, the game runs on the development versions of the app (_js/app.js_, _js/start.js_, _js.engine.js_), but the optimized code is also provided.
