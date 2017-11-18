@@ -18,7 +18,7 @@ The transpiled code is located in _dist_ folder.
 
 
 ## How to run the game
-* The game can be run here: https://nraovic.github.io/Classic-arcade-game-clone-project/
+You can run the game following the link: https://nraovic.github.io/Classic-arcade-game-clone-project/
 
 Or:
 1. Open _index.html_ 
