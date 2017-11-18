@@ -94,15 +94,16 @@ var Engine = (function(global) {
         allEnemies.forEach(function(enemy) {
             let enemyIndex = allEnemies.indexOf(enemy);
             //first enemy should not have delay, so the game can start as soon as the page opens
-            if (enemyIndex === 0){
-                enemy.update(dt);
+            //if (enemyIndex === 0){
+            enemy.update(dt);
             //other enemies should have delay, so that they don't appear all at the same time
-            } else {
-                setTimeout(function() {enemy.update(dt);}, enemy.delay);
-            }
-            //delete the enemy after it's run over the canvas and initiate a new one
+            //} else {
+            //    setTimeout(function() {enemy.update(dt);}, enemy.delay);
+            //}
+            //reset the enemy's position after it's run over the canvas
             if (enemy.x >= 600) {
-                allEnemies.splice(enemyIndex, 1, new Enemy());
+                enemy.x = -100;
+                enemy.y = getRandomFromArray([60, 143, 223]);
             }
             enemy.collision();
         });

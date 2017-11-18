@@ -71,7 +71,7 @@ class GameObject {
 }
 
 class Enemy extends GameObject {
-    constructor(sprite = 'images/enemy-bug.png', x = -100, y = getRandomFromArray([60, 143, 223]), height = 67, width = 80, speedX = getRandomInt(200, 500), delay = getRandomInt(0, 3000)) {
+    constructor(sprite = 'images/enemy-bug.png', x = -200, y = getRandomFromArray([60, 143, 223]), height = 67, width = 80, speedX = getRandomInt(200, 500), delay = getRandomInt(0, 3000)) {
         super(sprite, x, y, height, width);
         this.speedX = speedX;
         this.delay = delay;
@@ -137,8 +137,8 @@ class Player extends GameObject {
     update() {
         //reset players's position when it reaches the water and update the score value
         if (this.y === 410 - 5 * colStep) {
-            player.y = 410; 
-            player.x = 202;
+            this.y = 410; 
+            this.x = 202;
             scoreValue += 20;
             score.textContent = `Score: ${scoreValue}/60`;
             //dialog box
