@@ -73,15 +73,15 @@ function getYCoordinate() {
 }
 
 class Enemy extends GameObject {
-    constructor(sprite = 'images/enemy-bug.png', x = -200, y = getYCoordinate(), height = 67, width = 80, speedX = getRandomSpeed()) {
+    constructor(sprite = 'images/enemy-bug.png', x = -200, y = getYCoordinate(), height = 67, width = 80, speed = getRandomSpeed()) {
         super(sprite, x, y, height, width);
-        this.speedX = speedX;
+        this.speed = speed;
     } 
     // Multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
     update(dt) {
-        this.x += this.speedX * dt;
+        this.x += this.speed * dt;
     }
     collision() {
         if (this.x < player.x + player.width &&
