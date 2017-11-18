@@ -6,7 +6,7 @@ The goal of this project is to build **object-oriented** Frogger game including 
 ## ES6
 The game is build using ES6 features, and Babel is used to transpile the ES6 code to ES5. 
 
-However, the game runs on the development versions of the app (_js/app.js_, _js/start.js_, _js.engine.js_), but the optimized code is also provided.
+However, the game runs on the development versions of the app (_js/app.js_, _js/start.js_, _js/engine.js_), but the optimized code is also provided.
 
 Transpiling code is done following the Babel CLI Setup - https://babeljs.io/docs/setup/#installation
 
