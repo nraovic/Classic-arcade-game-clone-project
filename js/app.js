@@ -1,13 +1,3 @@
-//helper functions
-function getRandomSpeed() {
-    return Math.floor(Math.random() * (500 - 200)) + 200;
-}
-
-function getYCoordinate() {
-    const yCoordinates = [60, 143, 223];
-    return yCoordinates[Math.floor(Math.random() * yCoordinates.length)];
-}
-
 //dialog - pops up when the game is over or won
 const dialogFunc = function(firstLine, secondLine) {
     const dialog = document.createElement('div');
@@ -69,6 +59,17 @@ class GameObject {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 
+}
+
+//helper functions
+//random speed in pixel/sec
+function getRandomSpeed() {
+    return Math.floor(Math.random() * (500 - 200)) + 200;
+}
+
+function getYCoordinate() {
+    const yCoordinates = [60, 143, 223];
+    return yCoordinates[Math.floor(Math.random() * yCoordinates.length)];
 }
 
 class Enemy extends GameObject {
