@@ -8,15 +8,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-//helper functions
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-}
-function getRandomFromArray(myArray) {
-    return myArray[Math.floor(Math.random() * myArray.length)];
-}
 //dialog - pops up when the game is over or won
 var dialogFunc = function dialogFunc(firstLine, secondLine) {
     var dialog = document.createElement('div');
@@ -73,7 +64,7 @@ var dialogFunc = function dialogFunc(firstLine, secondLine) {
 
 //Set the player's name, score and number of lives to show up on the screen
 //player's name
-var playerName = document.getElementById('name');
+var playerName = document.querySelector('.name');
 playerName.textContent = 'PLAYER: ' + sessionStorage.getItem('charName');
 
 //lives
@@ -109,24 +100,35 @@ var GameObject = function () {
     return GameObject;
 }();
 
+//helper functions
+//random speed in pixel/sec
+
+
+function getRandomSpeed() {
+    return Math.floor(Math.random() * (500 - 200)) + 200;
+}
+
+function getYCoordinate() {
+    var yCoordinates = [60, 143, 223];
+    return yCoordinates[Math.floor(Math.random() * yCoordinates.length)];
+}
+
 var Enemy = function (_GameObject) {
     _inherits(Enemy, _GameObject);
 
     function Enemy() {
         var sprite = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'images/enemy-bug.png';
-        var x = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : -100;
-        var y = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : getRandomFromArray([60, 143, 223]);
+        var x = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : -200;
+        var y = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : getYCoordinate();
         var height = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 67;
         var width = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : 80;
-        var speedX = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : getRandomInt(200, 500);
-        var delay = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : getRandomInt(0, 3000);
+        var speedX = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : getRandomSpeed();
 
         _classCallCheck(this, Enemy);
 
         var _this = _possibleConstructorReturn(this, (Enemy.__proto__ || Object.getPrototypeOf(Enemy)).call(this, sprite, x, y, height, width));
 
         _this.speedX = speedX;
-        _this.delay = delay;
         return _this;
     }
     // Multiply any movement by the dt parameter
@@ -216,8 +218,8 @@ var Player = function (_GameObject2) {
         value: function update() {
             //reset players's position when it reaches the water and update the score value
             if (this.y === 410 - 5 * colStep) {
-                player.y = 410;
-                player.x = 202;
+                this.y = 410;
+                this.x = 202;
                 scoreValue += 20;
                 score.textContent = 'Score: ' + scoreValue + '/60';
                 //dialog box
@@ -239,9 +241,8 @@ var enemy1 = new Enemy();
 var enemy2 = new Enemy();
 var enemy3 = new Enemy();
 var enemy4 = new Enemy();
-var enemy5 = new Enemy();
 
-var allEnemies = [enemy1, enemy2, enemy3, enemy4, enemy5];
+var allEnemies = [enemy1, enemy2, enemy3, enemy4];
 // Place the player object in a variable called player
 var player = new Player();
 
