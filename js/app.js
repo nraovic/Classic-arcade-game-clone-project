@@ -42,7 +42,7 @@ const dialogFunc = function(firstLine, secondLine) {
 
 //Set the player's name, score and number of lives to show up on the screen
 //player's name
-const playerName = document.getElementById('name');
+const playerName = document.querySelector('.name');
 playerName.textContent = `PLAYER: ${sessionStorage.getItem('charName')}`;
 
 //lives
