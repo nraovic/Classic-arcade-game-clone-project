@@ -1,13 +1,13 @@
 //helper functions
 function getRandomSpeed() {
-    const minSpeed = Math.ceil(200);
-    const maxSpeed = Math.floor(500);
-    return Math.floor(Math.random() * (maxSpeed - minSpeed)) + minSpeed;
+    return Math.floor(Math.random() * (500 - 200)) + 200;
 }
+
 function getYCoordinate() {
     const yCoordinates = [60, 143, 223];
     return yCoordinates[Math.floor(Math.random() * yCoordinates.length)];
 }
+
 //dialog - pops up when the game is over or won
 const dialogFunc = function(firstLine, secondLine) {
     const dialog = document.createElement('div');
@@ -75,7 +75,6 @@ class Enemy extends GameObject {
     constructor(sprite = 'images/enemy-bug.png', x = -200, y = getYCoordinate(), height = 67, width = 80, speedX = getRandomSpeed()) {
         super(sprite, x, y, height, width);
         this.speedX = speedX;
-        //this.delay = delay;
     } 
     // Multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for

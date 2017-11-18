@@ -92,9 +92,8 @@ var Engine = (function(global) {
      */
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {
-            let enemyIndex = allEnemies.indexOf(enemy);
             enemy.update(dt);
-            //reset the enemy's position after it's run over the canvas
+            //reset the enemy's position after it's run over the canvas and assign random speed and y coordinate
             if (enemy.x >= 600) {
                 enemy.x = -200;
                 enemy.y = getYCoordinate();
