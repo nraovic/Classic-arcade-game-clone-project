@@ -34,8 +34,13 @@ ul.addEventListener('click', (e) => {
                 char.className = '';
             }
         }
-        const buttonClicked = button.style.backgroundImage.match(/"(.*?)"/)[1]; //parse the url to get only the image name 
-        sessionStorage.setItem('sprite', buttonClicked);
+        //Get the url of the button's background image
+        const buttonBackgroundUrl = button.style.backgroundImage;
+        //Parse the url to get only the image name
+        const buttonBackgroundUrlParts = buttonBackgroundUrl.split("\"");
+        spritePath = buttonBackgroundUrlParts[1];
+        console.log(spritePath);
+        sessionStorage.setItem('sprite', spritePath);
     }
 });
 
